@@ -26,5 +26,9 @@
   {
     "name": "install-iptables.sh",
     "description": "Install iptables & iptables-persistent via APT"
+  },
+  {
+    "name": "install-lynix.sh",
+    "description": "Install Lynix via apt (deb)"
   }
 ]
