@@ -8,12 +8,12 @@ A list of useful linux scripts with interactive selection script
 
 ### Using a short URL
 ```bash
-curl -sSL scripts.base2code.de | bash
+bash <(curl -sSL scripts.base2code.de)
 ```
 
 ### Using the GitHub URL
 ```bash
-curl -sSL https://raw.githubusercontent.com/base2code/linux-scripts/main/main.sh | bash
+bash <(curl -sSL https://raw.githubusercontent.com/base2code/linux-scripts/main/main.sh)
 ```
 
 
