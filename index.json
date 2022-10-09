@@ -22,5 +22,9 @@
   {
     "name": "install-docker.sh",
     "description": "Install Docker via get.docker.com script"
+  },
+  {
+    "name": "install-iptables.sh",
+    "description": "Install iptables & iptables-persistent via APT"
   }
 ]
