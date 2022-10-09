@@ -10,10 +10,20 @@ on:
 
 jobs:
   generate:
-    if: "contains(github.event.head_commit.message, '#regenerate')"
+    if: "!contains(github.event.head_commit.message, '#regenerate')"
     runs-on: ubuntu-latest
 
     steps:
-    - name: GitHub Script
-      uses: actions/github-script@v6.3.1
+    - name: Checkout
+      uses: actions/checkout@v3
+        
+    - name: Run generate_index.sh
+      run: ./generate_index.sh
+    
+    - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+      with:
+        add: 'index.json'
+        author_name: GitHub Actions
+#        author_email: mail@example.com
+
 
