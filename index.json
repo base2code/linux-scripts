@@ -18,5 +18,9 @@
   {
     "name": "install-docker-compose.sh",
     "description": "Install x86_64 linux version of docker-compose"
+  },
+  {
+    "name": "install-docker.sh",
+    "description": "Install Docker via get.docker.com script"
   }
 ]
