@@ -45,7 +45,7 @@ for script in ${script_names[@]}; do
 done
 elements=i-1
 
-echo ""
+echo "Please type in a number from 0 to ${elements}:"
 
 read -r selection
 
