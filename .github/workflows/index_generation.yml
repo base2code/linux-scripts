@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  generate:
+    if: "contains(github.event.head_commit.message, '#regenerate')"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: GitHub Script
+      uses: actions/github-script@v6.3.1
+
