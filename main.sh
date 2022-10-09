@@ -29,10 +29,7 @@ if ! [ $? -eq 0 ]; then
 fi
 
 declare -a script_names
-script_names=$(echo $index | jq -r ".[] | .name")
-
-declare -a script_descriptions
-script_descriptions=$(echo $index | jq -r ".[] | .description")
+script_names=($(echo $index | jq -r ".[] | .name"))
 
 # initialize counter for selection menu
 declare -i i
@@ -43,10 +40,12 @@ echo "Please choose a script to execute:"
 echo ""
 
 for script in ${script_names[@]}; do
-    echo "[${i}] ${script} - ${script_descriptions[$i]}"
+    echo "[${i}] ${script} - $(echo $index | jq -r ".[${i}] | .description")"
     i=i+1
 done
 elements=i-1
+
+echo ""
 
 read -r selection
 
@@ -64,7 +63,7 @@ elif (( $selection < 0 )); then
     exit
 fi
 
-selected_name=${script_names[$selection]}
+selected_name=${script_names[$((${selection}))]}
 echo ""
 echo "Selected script: ${selected_name}"
 echo ""
