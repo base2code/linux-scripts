@@ -1,5 +1,9 @@
 [
   {
+    "name": "basic-iptables.sh",
+    "description": "EXPERIMENTAL - basic iptables setup (rules)"
+  },
+  {
     "name": "disable-ipv6.sh",
     "description": "Disables IPv6"
   },
