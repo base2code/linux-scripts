@@ -1,0 +1,10 @@
+[
+  {
+    "name": "disable-ipv6.sh",
+    "description": "Disables IPv6"
+  },
+  {
+    "name": "hello-world.sh",
+    "description": "Prints \"Hello World\""
+  }
+]
