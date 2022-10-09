@@ -10,5 +10,9 @@
   {
     "name": "hello-world.sh",
     "description": "Prints \"Hello World\""
+  },
+  {
+    "name": "install-certbot.sh",
+    "description": "Install Certbot via snapd (over apt) and create symlink"
   }
 ]
