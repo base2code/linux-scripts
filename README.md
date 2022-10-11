@@ -16,6 +16,21 @@ bash <(curl -sSL scripts.base2code.de)
 bash <(curl -sSL https://raw.githubusercontent.com/base2code/linux-scripts/main/main.sh)
 ```
 
+## Dependencies
+
+The script uses `curl` and `jq`.
+
+### Debian / Ubuntu (apt)
+```bash
+sudo apt-get install curl jq -y
+```
+
+### Yum
+```bash
+sudo yum install epel-release -y
+sudo yum install curl jq -y
+```
+
 
 ## Contributing
 
