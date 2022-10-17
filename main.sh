@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 INDEX_URL="https://raw.githubusercontent.com/base2code/linux-scripts/main/index.json"
 BASE_URL="https://raw.githubusercontent.com/base2code/linux-scripts/main/scripts/"
