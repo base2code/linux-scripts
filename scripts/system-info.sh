@@ -2,7 +2,7 @@
 #Script to print useful system information
 
 # Converts memory values in human readable format
-function convertHuman {
+convertHuman() {
     returned=$(echo $1 | awk ' \
             function human(x) { \
                 if (x<1000) {return x} else {x/=1024} \
