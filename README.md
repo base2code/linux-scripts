@@ -31,7 +31,7 @@ sudo yum install epel-release -y
 sudo yum install curl jq -y
 ```
 
-## Telemetry
+<!---## Telemetry
 
 This script collects telemetry data. The following data is being transmitted:
 - Used script name
@@ -42,6 +42,7 @@ To disable telemetry simply run
 export DO_NOT_TRACK=1
 ```
 [Console Do Not Track](https://consoledonottrack.com)
+--->
 
 ## Contributing
 
