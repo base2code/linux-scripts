@@ -9,8 +9,19 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate-sctipts:
+  # bash -n scriptname
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Check syntax
+      run: for script in $(ls scripts/*.sh); do bash -n $script; done
+      
   generate:
-    if: "!contains(github.event.head_commit.message, '#regenerate')"
+    if: "!contains(github.event.head_commit.message, '#regenerate') && github.ref == 'refs/heads/main'"
     runs-on: ubuntu-22.04
 
     steps:
