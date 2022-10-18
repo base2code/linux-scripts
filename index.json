@@ -4,6 +4,10 @@
     "description": "EXPERIMENTAL - basic iptables setup (rules)"
   },
   {
+    "name": "connections.sh",
+    "description": "View TCP connections to current machine from remote hosts grouped by IP"
+  },
+  {
     "name": "disable-ipv6.sh",
     "description": "Disables IPv6"
   },
