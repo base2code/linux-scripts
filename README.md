@@ -8,13 +8,15 @@ A list of useful linux scripts with interactive selection script
 
 ### Using a short URL
 ```bash
-bash <(curl -sSL scripts.base2code.de)
+bash <(curl -sSL scripts.base2code.de) [search]
 ```
 
 ### Using the GitHub URL
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/base2code/linux-scripts/main/main.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/base2code/linux-scripts/main/main.sh) [search]
 ```
+
+`[search]` is optional. If specified the given term will be comparend to the script list using regex.
 
 ## Dependencies
 
