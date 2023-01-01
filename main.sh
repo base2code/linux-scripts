@@ -31,39 +31,60 @@ fi
 declare -a script_names
 script_names=($(echo $index | jq -r ".[] | .name"))
 
-# initialize counter for selection menu
-declare -i i
-i=0
+given_name=$1
 
-echo ""
-echo "Please choose a script to execute:"
-echo ""
+if [ -z "$given_name" ]; then
 
-for script in ${script_names[@]}; do
-    echo "[${i}] ${script} - $(echo $index | jq -r ".[${i}] | .description")"
-    i=i+1
-done
-elements=i-1
 
-echo "Please type in a number from 0 to ${elements}:"
+    # initialize counter for selection menu
+    declare -i i
+    i=0
 
-read -r selection
+    echo ""
+    echo "Please choose a script to execute:"
+    echo ""
 
-if ! [[ $selection =~ $NUMBER_REGEX ]] ; then
-    echo "error: Not a number"
-    exit
+    for script in ${script_names[@]}; do
+        echo "[${i}] ${script} - $(echo $index | jq -r ".[${i}] | .description")"
+        i=i+1
+    done
+    elements=i-1
+
+    echo "Please type in a number from 0 to ${elements}:"
+
+    read -r selection
+
+    if ! [[ $selection =~ $NUMBER_REGEX ]] ; then
+        echo "error: Not a number"
+        exit
+    fi
+
+
+    if (( $elements < $selection )); then
+        echo "selection is greater than availiable scripts"
+        exit
+    elif (( $selection < 0 )); then
+        echo "selection is smaller than 0"
+        exit
+    fi
+
+    selected_name=${script_names[$((${selection}))]}
+
+else
+    echo "Seach term "$given_name" has beed detected"
+    regex_search="${given_name}*"
+    for script in ${script_names[@]}; do
+        if [[ $script =~ $regex_search ]]; then
+	    selected_name=$script
+	fi
+    done
+
+    if [ -z $selected_name ]; then
+	echo "Specified script could not be found."
+	exit 1
+    fi
 fi
 
-
-if (( $elements < $selection )); then
-    echo "selection is greater than availiable scripts"
-    exit
-elif (( $selection < 0 )); then
-    echo "selection is smaller than 0"
-    exit
-fi
-
-selected_name=${script_names[$((${selection}))]}
 echo ""
 echo "Selected script: ${selected_name}"
 echo ""
@@ -103,3 +124,4 @@ echo "Do not forget to make script executable."
 
 echo ""
 echo "Script finished successfully"
+
