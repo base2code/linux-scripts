@@ -4,6 +4,10 @@
     "description": "EXPERIMENTAL - basic iptables setup (rules)"
   },
   {
+    "name": "biggest-files.sh",
+    "description": "Get a list of the 100 biggest files and directories starting in /"
+  },
+  {
     "name": "connections.sh",
     "description": "View TCP connections to current machine from remote hosts grouped by IP"
   },
