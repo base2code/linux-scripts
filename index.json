@@ -1,5 +1,9 @@
 [
   {
+    "name": "8gb-swap.sh",
+    "description": "CAUTION: Creates 8GB of swap in /swapfile (overwriting and creating new)"
+  },
+  {
     "name": "basic-iptables.sh",
     "description": "EXPERIMENTAL - basic iptables setup (rules)"
   },
