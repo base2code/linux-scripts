@@ -40,8 +40,8 @@
     "description": "Install iptables & iptables-persistent via APT"
   },
   {
-    "name": "install-lynix.sh",
-    "description": "Install Lynix via apt (deb)"
+    "name": "install-lynis.sh",
+    "description": "Install Lynis via apt (deb)"
   },
   {
     "name": "system-info.sh",
