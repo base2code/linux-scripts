@@ -36,5 +36,3 @@ jobs:
         add: 'index.json'
         author_name: GitHub Actions
 #        author_email: mail@example.com
-
-
