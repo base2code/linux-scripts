@@ -44,10 +44,6 @@
     "description": "Install Lynis via apt (deb)"
   },
   {
-    "name": "isbgpsafeyet.sh",
-    "description": "Check if your ISP implements BGP securly"
-  },
-  {
     "name": "system-info.sh",
     "description": "Script to print useful system information"
   }
